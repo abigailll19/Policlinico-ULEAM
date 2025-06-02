@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <title>Historial del Paciente - Odontograma</title>
+    <link rel="stylesheet" href="odontograma.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">Historial del Paciente</div>
+            <div class="patient-info">María Vélez - 58 años</div>
+        </div>
+
+        <div class="odontograma-section">
+            <div class="odontograma-title">Odontograma</div>
+            
+            <div class="controls">
+                <button class="control-btn active" data-state="sano">🦷 Sano</button>
+                <button class="control-btn" data-state="caries">🔴 Caries</button>
+                <button class="control-btn" data-state="arreglado">🔵 Arreglado</button>
+                <button class="control-btn" data-state="faltante">⚫ Faltante</button>
+            </div>
+
+            <div class="tooth-info">
+                <strong>1. Selecciona un estado arriba</strong><br>
+                <strong>2. Haz clic en cualquier diente para aplicar el estado</strong>
+            </div>
+
+            <div class="teeth-grid" id="upperTeeth"></div>
+            <div class="teeth-grid" id="lowerTeeth"></div>
+
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color sano"></div><span>Sano</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color caries"></div><span>Caries</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color arreglado"></div><span>Arreglado</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color faltante"></div><span>Faltante</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="notes-section">
+            <div class="notes-title">Notas del tratamiento</div>
+            <textarea class="notes-textarea" id="treatmentNotes" placeholder="Ingrese las notas del tratamiento aquí..."></textarea>
+        </div>
+
+        <button class="save-btn" onclick="saveChanges()">📁 Guardar cambios</button>
+
+        <div class="history-section">
+            <div class="history-title">Historial reciente</div>
+            <div id="historyList">
+                
+            </div>
+        </div>
+    </div>
+    <script src="odontograma.js"></script>
+</body>
+</html>

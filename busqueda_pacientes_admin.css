@@ -1,0 +1,132 @@
+/*busqueda paciemtes admin*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+
+.search-btn {
+    background: #666;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/* Contenedor principal */
+.main-container {
+    background-color: white;
+    border: 2px solid #999;
+    margin: 0;
+    min-height: 500px;
+    padding: 20px;
+}
+
+/* Sección de búsqueda */
+.search-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #666;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 15px;
+    padding-left: 45px;
+    border: 2px solid #999;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: #f8f8f8;
+}
+
+
+
+/* Tarjeta de paciente */
+.patient-card {
+    border: 2px solid #d3d3d3;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+}
+
+.patient-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.info-btn {
+    background-color: #a82222;
+    border: 2px solid #8b1818;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.info-btn:hover {
+    background-color: #6d0d0d;
+}
+
+.patient-info {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #e2e2e2;
+    border: 1px solid #e0dede;
+    border-radius: 4px;
+}
+
+.info-item {
+    margin-bottom: 10px;
+    font-size: 14px;    
+}
+
+.info-label {
+    font-weight: bold;
+    color: #555;
+    display: inline-block;
+    width: 140px;
+}
+
+.info-value {
+    color: #333;
+}
+
+/* Barra inferior */
+.status-bar {
+    background-color: #e0e0e0;
+    border-top: 2px solid #999;
+    padding: 8px;
+    margin-top: auto;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Resultado si no hay coincidencias */
+.no-results {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin-top: 40px;
+}

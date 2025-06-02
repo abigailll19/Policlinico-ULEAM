@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <title>Búsqueda de Pacientes</title>
+    <link rel="stylesheet" href="busqueda_pacientes_admin.css">
+</head>
+<body>
+
+    <!-- Contenido principal -->
+    <div class="main-container">
+        <div class="search-section">
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="Buscar por cédula, nombre o teléfono..." oninput="searchPatients()">
+            </div>
+        </div>
+
+        <div id="results-container">
+            <!-- Resultados de pacientes -->
+            <div class="patient-card">
+                <div class="patient-name">Luisa Mendoza</div>
+                <button class="info-btn" onclick="toggleInfo('luisa')">Ver Información</button>
+                <div class="patient-info" id="info-luisa">
+                    <div class="info-item">
+                        <span class="info-label">Correo Institucional:</span>
+                        <span class="info-value">luisa.mendoza@clinicadentu.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Número de Teléfono:</span>
+                        <span class="info-value">+593 99 123 4567</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Edad:</span>
+                        <span class="info-value">34 años</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Cédula:</span>
+                        <span class="info-value">1315251288</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Fecha de Registro:</span>
+                        <span class="info-value">15 de Marzo, 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="patient-card">
+                <div class="patient-name">Antonio Gómez</div>
+                <button class="info-btn" onclick="toggleInfo('antonio')">Ver Información</button>
+                <div class="patient-info" id="info-antonio">
+                    <div class="info-item">
+                        <span class="info-label">Correo Institucional:</span>
+                        <span class="info-value">antonio.gomez@clinicadentu.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Número de Teléfono:</span>
+                        <span class="info-value">+593 98 765 4321</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Edad:</span>
+                        <span class="info-value">42 años</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Cédula:</span>
+                        <span class="info-value">0987654321</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Fecha de Registro:</span>
+                        <span class="info-value">22 de Febrero, 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="patient-card">
+                <div class="patient-name">María Rodríguez</div>
+                <button class="info-btn" onclick="toggleInfo('maria')">Ver Información</button>
+                <div class="patient-info" id="info-maria">
+                    <div class="info-item">
+                        <span class="info-label">Correo Institucional:</span>
+                        <span class="info-value">maria.rodriguez@clinicadentu.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Número de Teléfono:</span>
+                        <span class="info-value">+593 97 555 1234</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Edad:</span>
+                        <span class="info-value">28 años</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Cédula:</span>
+                        <span class="info-value">1234567890</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Fecha de Registro:</span>
+                        <span class="info-value">08 de Abril, 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="no-results" id="no-results" style="display: none;">
+            No se encontraron pacientes que coincidan con la búsqueda.
+        </div>
+    </div>
+
+    <!-- Barra de estado -->
+    <div class="status-bar">
+    </div>
+
+    <script src="busqueda_pacientes_admin.js"></script>
+</body>
+</html>

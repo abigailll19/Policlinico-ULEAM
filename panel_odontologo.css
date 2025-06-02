@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.browser-frame {
+    background-color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.content {
+    background-color: white;
+    padding: 20px;
+    min-height: 500px;
+}
+
+.doctor-header {
+    background-color: #90c695;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.doctor-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2d5831;
+    margin-bottom: 2px;
+}
+
+.date {
+    font-size: 14px;
+    color: #2d5831;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    padding-left: 40px;
+}
+
+.patient-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.patient-card {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    background-color: white;
+    transition: all 0.2s ease;
+}
+
+.patient-card:hover {
+    border-color: #90c695;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.patient-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: white;
+    font-size: 18px;
+}
+
+.patient-info {
+    flex: 1;
+}
+
+.patient-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.patient-details {
+    font-size: 12px;
+    color: #666;
+}
+
+.ver-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.ver-btn:hover {
+    background-color: #c0392b;
+}

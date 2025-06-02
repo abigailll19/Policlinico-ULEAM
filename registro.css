@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Times New Roman';
+    background: linear-gradient(135deg, #ffffff 0%, #034d21 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.clinic-brand {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ad2a1c;
+    font-weight: bold;
+    font-size: 45px;
+    z-index: 1000;
+}
+
+.logo-imagen {
+  width: 150px;   /* Ajusta al tamaño deseado */
+  height: auto;
+}
+
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    position: auto;
+}
+
+.header {
+    background: #f8f9fa;
+    padding: 30px 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #034d21;
+    margin-bottom: 20px;
+}
+
+.switch-container {
+    background: #034d21;
+    border-radius: 25px;
+    padding: 4px;
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.switch-option {
+    flex: 1;
+    padding: 12px 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #6c757d;
+    position: relative;
+    z-index: 2;
+}
+
+.switch-option.active {
+    color: #034d21;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #034d21;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #034d21;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+    font-size: 18px;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #ad2a1c;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #ad2a1c 0%, #ad2a1c 100%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(3, 48, 22, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.form-section {
+    display: none;
+}
+
+.form-section.active {
+    display: block;
+}
+
+.date-input {
+    background: #f8f9fa;
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 10px;
+    }
+    
+    .header, .form-container {
+        padding: 20px;
+    }
+    
+    .clinic-brand {
+        font-size: 18px;
+    }
+}

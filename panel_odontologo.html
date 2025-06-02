@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <title>ClinicaDent U</title>
+    <link rel="stylesheet" href="panel_odontologo.css">
+</head>
+<body>
+    <div class="browser-frame">
+        <div class="content">
+            <div class="doctor-header">
+                <div class="doctor-name">Dr. García</div>
+                <div class="date">Miércoles 24 de Abril, 2025</div>
+            </div>
+
+            <h2 class="section-title">Lista de Pacientes</h2>
+
+            <div class="patient-list" id="patientList">
+                <div class="patient-card">
+                    <div class="patient-icon">👤</div>
+                    <div class="patient-info">
+                        <div class="patient-name">María Vélez</div>
+                        <div class="patient-details">Edad: 58 años - Sexo: Femenino</div>
+                    </div>
+                    <button class="ver-btn" onclick="verPaciente('María Vélez')">Ver</button>
+                </div>
+                <div class="patient-card">
+                    <div class="patient-icon">👤</div>
+                    <div class="patient-info">
+                        <div class="patient-name">Sofía Torres</div>
+                        <div class="patient-details">Edad: 34 años - Sexo: Femenino</div>
+                    </div>
+                    <button class="ver-btn" onclick="verPaciente('Sofía Torres')">Ver</button>
+                </div>
+
+                <div class="patient-card">
+                    <div class="patient-icon">👤</div>
+                    <div class="patient-info">
+                        <div class="patient-name">Fabricio Alava</div>
+                        <div class="patient-details">Edad: 45 años - Sexo: Masculino</div>
+                    </div>
+                    <button class="ver-btn" onclick="verPaciente('Fabricio Alava')">Ver</button>
+                </div>
+
+                <div class="patient-card">
+                    <div class="patient-icon">👤</div>
+                    <div class="patient-info">
+                        <div class="patient-name">Carlos Ruiz</div>
+                        <div class="patient-details">Edad: 20 años - Sexo: Masculino</div>
+                    </div>
+                    <button class="ver-btn" onclick="verPaciente('Carlos Ruiz')">Ver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="panel_odontologo.js"></script>
+</body>
+</html>

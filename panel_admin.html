@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <title>Sistema Web - Panel Administrador</title>
+    <link rel="stylesheet" href="panel_admin.css">
+    </head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sistema Web - Panel Administrador</h1>
+            <p>Bienvenido Admin | Hoy, <span id="current-date"></p>
+        </div>
+
+        <div class="main-content">
+            <div class="buttons-grid">
+                <button class="admin-button btn-red" onclick="showSection('usuarios')">
+                    <div class="btn-icon">📅</div>
+                    <div class="btn-text">
+                        <div class="btn-title">Agendar citas</div>
+                        <div class="btn-subtitle">Citas para nuevo paciente</div>
+                    </div>
+                </button>
+
+                <button class="admin-button btn-gray" onclick="showSection('buscar_paciente')">
+                    <div class="btn-icon">🔍</div>
+                    <div class="btn-text">
+                        <div class="btn-title">Buscar paciente</div>
+                        <div class="btn-subtitle">Consultas e historial</div>
+                    </div>
+                </button>
+            </div>    
+        </div>
+    </div>
+    <!-- Modal para agendar citas -->
+    <div id="appointment-modal" class="modal">
+        <div class="modal-content appointment-modal">
+            <div class="appointment-panel">
+                <div class="appointment-title">
+                    ¿Qué horario desea consultar?
+                </div>
+                
+                <div class="doctors-grid">
+                    <div class="doctor-card" onclick="selectDoctor(this, 'Dr. García')">
+                        <div class="doctor-icon">🦷</div>
+                        <div class="doctor-info">
+                            <div class="doctor-name">Dr. García</div>
+                            <div class="doctor-specialty">Odontología</div>
+                        </div>
+                    </div>
+                    
+                    <div class="doctor-card" onclick="selectDoctor(this, 'Dr. Intriago')">
+                        <div class="doctor-icon">🦷</div>
+                        <div class="doctor-info">
+                            <div class="doctor-name">Dra. Mendoza </div>
+                            <div class="doctor-specialty">Ortodoncia</div>
+                        </div>
+                    </div>
+                </div>            
+                <button class="schedule-btn" onclick="consultSchedule()" id="schedule-btn" disabled>
+                    Consultar horario
+                </button>       
+        </div>
+    </div>
+    <script src="panel_admin.js"> </script>
+       
+</body>
+</html>
