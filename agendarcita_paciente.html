@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+    <title>Agendar cita</title>
+    <link rel="stylesheet" href="agendarcita_paciente.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🦷 Clínica Dental</h1>
+            <p>Agendar Cita</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <div class="section-title">
+                    <span class="section-number">1</span>
+                    ¿Con qué doctor te gustaría agendar?
+                </div>
+                <div class="doctors">
+                    <div class="doctor-card" data-doctor="garcia">
+                        <span class="doctor-icon">🦷</span>
+                        <div class="doctor-name">Dr. García</div>
+                        <div class="doctor-specialty">Odontología General</div>
+                    </div>
+                    <div class="doctor-card" data-doctor="mendoza">
+                        <span class="doctor-icon">🦷</span>
+                        <div class="doctor-name">Dra. Mendoza></div>
+                        <div class="doctor-specialty">Endodoncia</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <span class="section-number">2</span>
+                    Elige fecha para la cita
+                </div>
+                <div class="date-selector">
+                    <div class="date-btn" data-date="18">
+                        <div>L</div>
+                        <div>18</div>
+                    </div>
+                    <div class="date-btn" data-date="19">
+                        <div>M</div>
+                        <div>19</div>
+                    </div>
+                    <div class="date-btn unavailable" data-date="20">
+                        <div>M</div>
+                        <div>20</div>
+                    </div>
+                    <div class="date-btn" data-date="21">
+                        <div>J</div>
+                        <div>21</div>
+                    </div>
+                    <div class="date-btn" data-date="22">
+                        <div>V</div>
+                        <div>22</div>
+                    </div>
+                    <div class="date-btn" data-date="23">
+                        <div>S</div>
+                        <div>23</div>
+                    </div>
+                    <div class="date-btn" data-date="24">
+                        <div>D</div>
+                        <div>24</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <span class="section-number">3</span>
+                    Horarios disponibles - 22 de mayo
+                </div>
+                <div class="time-slots">
+                    <div class="time-btn" data-time="9:00 am">9:00 am</div>
+                    <div class="time-btn" data-time="10:00 am">10:00 am</div>
+                    <div class="time-btn" data-time="12:00 M">12:00 M</div>
+                    <div class="time-btn" data-time="3:00 pm">3:00 pm</div>
+                    <div class="time-btn" data-time="4:00 pm">4:00 pm</div>
+                </div>
+            </div>
+
+            <div class="section appointment-summary" style="display: none;">
+                <div class="summary-title">📅 Su cita</div>
+                <div class="summary-details" id="appointmentDetails">
+                    Seleccione doctor, fecha y hora para ver el resumen
+                </div>
+            </div>
+
+            <button class="confirm-btn" id="confirmBtn" disabled>
+                Confirmar Cita
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación -->
+    <div class="modal" id="confirmModal">
+        <div class="modal-content">
+            <div class="modal-icon">✅</div>
+            <div class="modal-title">¡Cita Confirmada!</div>
+            <div class="modal-text" id="modalText">
+                Su cita ha sido agendada exitosamente.
+            </div>
+            <button class="modal-btn" onclick="closeModal()">Entendido</button>
+        </div>
+    </div>
+    <script src="agendarcita_paciente.js"></script>
+</body>
+</html>
+
