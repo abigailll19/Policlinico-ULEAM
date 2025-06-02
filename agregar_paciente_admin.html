@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <title>Calendario Médico</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 20px; background: linear-gradient(to right, #e0e0e0, #07410acc, #073123de);">
+    <div style="display: flex; gap: 20px; max-width: 800px; margin: 0 auto;">
+        <!-- Calendario Principal -->
+        <div style="background-color: rgb(255, 255, 255); border: 3px solid #4a5d23; border-radius: 8px; padding: 20px; width: 400px;">
+            <!-- Header del año -->
+            <div style="background-color: #90c695; padding: 10px; text-align: center; font-weight: bold; margin-bottom: 10px; border-radius: 4px;">
+                2025<br>
+                Mayo 2025
+            </div>
+            
+            <!-- Navegación del mes -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <button onclick="previousMonth()" style="background: none; border: none; font-size: 24px; cursor: pointer;">◀</button>
+                <h2 style="margin: 0; font-size: 18px;" id="monthYear">Mayo 2025</h2>
+                <button onclick="nextMonth()" style="background: none; border: none; font-size: 24px; cursor: pointer;">▶</button>
+            </div>
+            
+            <!-- Días de la semana -->
+            <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; margin-bottom: 10px; text-align: center; font-weight: bold;">
+                <div>L</div><div>M</div><div>M</div><div>J</div><div>V</div><div>S</div><div>D</div>
+            </div>
+            
+            <!-- Días del mes -->
+            <div id="calendar-grid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px;">
+                <!-- Los días se generarán dinámicamente -->
+            </div>
+        </div>
+        
+        <!-- Panel de pacientes del día -->
+        <div id="patients-panel" style="background-color: white; border: 3px solid #4a5d23; border-radius: 8px; padding: 20px; width: 300px; display: none;">
+            <div style="background-color: #90c695; padding: 10px; text-align: center; font-weight: bold; margin-bottom: 15px; border-radius: 4px;">
+                <span id="selected-date">Jueves 4 de Mayo</span>
+            </div>
+            
+            <h3 style="margin: 0 0 15px 0; font-size: 16px;">Pacientes agendados</h3>
+            
+            <div id="patients-list">
+                <!-- Lista de pacientes se genera dinámicamente -->
+            </div>
+            
+            <button id="add-patient-btn" onclick="showAddPatientForm()" style="
+                width: 100%; 
+                padding: 10px; 
+                background-color: #90c695; 
+                border: 2px solid #4a5d23; 
+                border-radius: 20px; 
+                cursor: pointer; 
+                font-weight: bold;
+                margin-top: 10px;
+            ">Agregar Paciente</button>
+
+
+            
+            <!-- Formulario para agregar paciente -->
+            <div id="add-patient-form" style="display: none; margin-top: 15px; padding: 15px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9;">
+                <h4 style="margin: 0 0 10px 0;">Nuevo Paciente</h4>
+                <input type="text" id="patient-name" placeholder="Nombre del paciente" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                <input type="time" id="patient-time" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                <div style="display: flex; gap: 10px;">
+                    <button onclick="addPatient()" style="flex: 1; padding: 8px; background-color: #4a5d23; color: white; border: none; border-radius: 4px; cursor: pointer;">Guardar</button>
+                    <button onclick="cancelAddPatient()" style="flex: 1; padding: 8px; background-color: #ccc; border: none; border-radius: 4px; cursor: pointer;">Cancelar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <script src="agregar_paciente_admin.js"></script>    
+    
+</body>
+</html>
